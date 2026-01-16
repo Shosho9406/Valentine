@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+h<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,60 +10,63 @@
             background: linear-gradient(135deg, #d81b60, #e91e63); /* Dark pink gradient */
             color: #fff;
             text-align: center;
-            padding: 50px;
+            padding: 20px; /* Reduced padding for mobile */
             margin: 0;
             overflow: hidden; /* For floating hearts */
         }
         h1 {
             color: #fff;
-            font-size: 2.5em;
+            font-size: 2em; /* Smaller on mobile */
             animation: bounceIn 1s ease-out;
+            margin: 0 10px; /* Add margin for small screens */
         }
         p {
-            font-size: 1.2em;
-            margin: 20px 0;
+            font-size: 1em; /* Smaller on mobile */
+            margin: 15px 10px; /* Adjusted margins */
             animation: fadeIn 2s ease-in;
         }
         button {
             background-color: #fff;
             color: #d81b60;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 12px 20px; /* Smaller padding */
+            font-size: 1em; /* Smaller font */
             cursor: pointer;
             border-radius: 25px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             animation: pulse 2s infinite;
-            margin: 10px;
+            margin: 5px; /* Smaller margin */
+            width: auto; /* Ensure buttons aren't too wide */
+            max-width: 200px; /* Limit width on small screens */
         }
         button:hover {
             background-color: #f8bbd9;
-            transform: scale(1.1);
+            transform: scale(1.05); /* Slightly less scale on mobile */
         }
         #message {
             display: none;
-            margin-top: 30px;
-            font-size: 1.5em;
+            margin-top: 20px; /* Reduced margin */
+            font-size: 1.2em; /* Smaller font */
             color: #fff;
             animation: slideIn 1s ease-out;
         }
         #response {
             display: none;
-            margin-top: 20px;
+            margin-top: 15px; /* Reduced margin */
         }
         img {
-            max-width: 100%;
+            max-width: 90%; /* Ensure image fits on small screens */
             height: auto;
-            margin: 20px 0;
+            margin: 15px 0; /* Adjusted margin */
             border-radius: 10px;
             animation: zoomIn 1.5s ease-out;
         }
-        /* Floating hearts animation */
+        /* Floating hearts animation - adjusted for mobile */
         .heart {
             position: absolute;
             color: #fff;
-            font-size: 2em;
+            font-size: 1.5em; /* Smaller hearts on mobile */
             animation: float 6s linear infinite;
             opacity: 0.7;
         }
@@ -76,6 +79,33 @@
         .heart:nth-child(7) { left: 70%; animation-delay: 6s; }
         .heart:nth-child(8) { left: 80%; animation-delay: 7s; }
         .heart:nth-child(9) { left: 90%; animation-delay: 8s; }
+
+        /* Media queries for small screens (phones) */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Even less padding */
+            }
+            h1 {
+                font-size: 1.8em; /* Smaller title */
+            }
+            p {
+                font-size: 0.9em; /* Smaller text */
+            }
+            button {
+                padding: 10px 15px; /* Smaller buttons */
+                font-size: 0.9em;
+                max-width: 150px; /* Narrower buttons */
+            }
+            #message {
+                font-size: 1em; /* Smaller message */
+            }
+            img {
+                max-width: 95%; /* Image takes more space */
+            }
+            .heart {
+                font-size: 1.2em; /* Even smaller hearts */
+            }
+        }
 
         /* Keyframes for animations */
         @keyframes bounceIn {
@@ -121,6 +151,7 @@
 
     <h1>Will You Be My Valentine?</h1>
     <p>Heyyy Princess, I've been thinking about you a lot, and I can't imagine spending Valentine's Day with anyone else.</p>
+    <img src="https://via.placeholder.com/400x300/ff69b4/ffffff?text=Hearts" alt="Romantic hearts" /> <!-- Replace with a real image URL if you have one -->
     <br>
     <button onclick="showMessage()">Click to Find Out Why</button>
     <div id="message">
@@ -141,7 +172,7 @@
             if (answer === 'yes') {
                 alert("Yay! I can't wait to celebrate with you! ❤️");
             } else {
-                alert("Were you looking for another option! 😊");
+                alert("yahhh wena you beauty! ❤️");
             }
         }
     </script>
